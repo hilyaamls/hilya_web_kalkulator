@@ -64,9 +64,26 @@ function calculate(firstOperand, secondOperand, operator) {
     else if (operator ==='/') {
     return firstOperand / secondOperand;
     }
+
+    else if (operator ==='^') {
+    return calculator.displayValue = Math.pow(firstOperand, secondOperand);
+    }
+
     return secondOperand;
 }
-    
+
+function sin(){
+    calculator.displayValue = Math.sin(calculator.displayValue);
+}
+
+function cos(){
+    calculator.displayValue = Math.cos(calculator.displayValue);
+}
+
+function tan(){
+    calculator.displayValue = Math.tan(calculator.displayValue);
+}
+
 function resetCalculator() {
     calculator.displayValue = '0',
     calculator.firstOperand = null;
@@ -94,17 +111,34 @@ function updateDisplay() {
       case '*':
       case '/':
       case '=':
+      case '^':
+    
     handleOperator(value);
       break;
+    
+      case 'sin':
+      sin(value);
+      break;
+    
+      case 'tan':
+      tan(value);
+      break;
+    
+      case 'cos':
+      cos(value);
+      break;
+
       case '.':
+    
     inputDecimal(value);
       break;
       case 'all-clear':
+    
     resetCalculator();
       break;
       default:
     
-      if (Number.isInteger(parseFloat(value))) {
+    if (Number.isInteger(parseFloat(value))) {
     inputDigit(value);
 }
 }

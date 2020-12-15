@@ -1,4 +1,4 @@
-html {
+    html {
     font-size: 62.5%;
     box-sizing: border-box;
     }
@@ -7,16 +7,44 @@ html {
         padding: 0;
         box-sizing: inherit;
     }
+
+    .container{
+        width : 800px;
+        margin : auto;
+        background-color: salmon;
+    }
+    
+    .header {
+        padding : 20px;
+        margin-bottom: 40px;
+        font-family: 'Times New Roman', Times, serif;
+        font-size  : 12px;
+        font-weight: bold;
+        color: #ffffff ;
+    }
+
+    .header .judul {
+        text-align: center;
+        font-size  : 14px;
+
+    }
+
+    body {
+        background-color: #eaeaea;
+        background-image: url('bg.jpg'); 
+        color: #333;
+    }
     
     .calculator {
         border: 3px solid rgb(255, 0, 0);
         border-radius: 5px;
         background-color: salmon;
         position: absolute;
-        top: 50%;
+        top: 55%;
         left: 50%;
         transform: translate(-50%, -50%);
         width: 400px;
+        margin-top: 40px;
     }
     
     .calculator-screen {
@@ -69,7 +97,7 @@ html {
         border-color: #ffffff;
         color: #fff;
         height: 100%;
-        grid-area: 2 / 4 / 6 / 5;
+        grid-area: 3 / 4 / 7 / 5;
     }
     
     .equal-sign:hover {
